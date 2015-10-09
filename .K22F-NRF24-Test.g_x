@@ -135,7 +135,7 @@
       <File Name="SDK/platform/drivers/src/dspi/fsl_dspi_common.c" FileDate="2015-09-18, 10:49:54" FileAge="1442591394611" FileType="1048576" CompNumb="17" />
       <File Name="SDK/platform/drivers/src/pit/fsl_pit_common.c" FileDate="2015-09-18, 11:05:19" FileAge="1442592319212" FileType="1048576" CompNumb="21" />
       <File Name="SDK/platform/hal/src/pit/fsl_pit_hal.c" FileDate="2015-09-18, 11:05:19" FileAge="1442592319145" FileType="1048576" CompNumb="22" />
-      <File Name="Sources/main.c" FileDate="2015-10-02, 19:54:27" FileAge="1443833667397" FileType="128" />
+      <File Name="Sources/main.c" FileDate="2015-10-05, 10:34:53" FileAge="1444059293983" FileType="128" />
       <File Name="SDK/platform/hal/inc/fsl_pit_hal.h" FileDate="2015-09-18, 11:05:19" FileAge="1442592319208" FileType="1048576" CompNumb="22" />
       <File Name="SDK/platform/drivers/src/gpio/fsl_gpio_common.c" FileDate="2015-09-18, 10:49:54" FileAge="1442591394598" FileType="1048576" CompNumb="14" />
       <File Name="SDK/platform/hal/src/mcg/fsl_mcg_hal.c" FileDate="2015-09-18, 09:08:58" FileAge="1442585338034" FileType="1048576" CompNumb="0" />
@@ -208,5 +208,5 @@
       <File Name="SDK/platform/devices/MK22F51212/include/MK22F51212_extension.h" FileDate="2015-09-18, 09:08:58" FileAge="1442585338274" FileType="1048576" CompNumb="1" />
     </GeneratedByPE>
   </GeneratedFilesList>
-  <CodeGenReference>13</CodeGenReference>
+  <CodeGenReference>15</CodeGenReference>
 </CodeGenerationInfo>

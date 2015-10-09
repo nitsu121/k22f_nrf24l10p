@@ -72,14 +72,77 @@ int main(void)
   Delay_ms(1000);
   //GPIO_DRV_SetPinOutput(LEDRGB_RED);
   //LEDRGB_RED
+
+  unsigned char SendNotGet = 1;
+
   while(1)
   {
 	  Delay_ms(10);
-	  GPIO_DRV_SetPinOutput(LEDRGB_BLUE);
-	  Clear_NRF_Int_Flags();
-	  SendNewPayload(SendArray, 5);
-	  Clear_NRF_Int_Flags();
-	  GPIO_DRV_ClearPinOutput(LEDRGB_BLUE);
+	  //GPIO_DRV_SetPinOutput(LEDRGB_BLUE);
+
+	  //GPIO_DRV_ReadPinInput(uint32_t pinName);
+	  //PUSH_BUTTON1
+
+	  if(1 == SendNotGet)  // send
+	  {
+		  Clear_NRF_Int_Flags();
+		  SendNewPayload(SendArray, 5);
+		  Clear_NRF_Int_Flags();
+		  GPIO_DRV_ClearPinOutput(LEDRGB_BLUE);
+	  }
+	  else  // read.
+	  {
+		  if(0x0E == Read_Status())
+		  {
+			  GPIO_DRV_SetPinOutput(LEDRGB_BLUE);
+		  }
+		  else
+		  {
+			  GPIO_DRV_ClearPinOutput(LEDRGB_BLUE);
+			  ReadPayload(ReadArray, 5);
+			  Clear_NRF_Int_Flags();
+		  }
+	  }
+
+	  if(0 == GPIO_DRV_ReadPinInput(PUSH_BUTTON1))
+	  {
+		  GPIO_DRV_ClearPinOutput(LEDRGB_BLUE);
+		  Delay_ms(300);
+		  GPIO_DRV_SetPinOutput(LEDRGB_BLUE);
+		  SendNotGet = 1;
+		  Set_NRF24L_Tx_Mode();
+		  while(0 == GPIO_DRV_ReadPinInput(PUSH_BUTTON1))
+		  {
+
+		  }
+	  }
+	  else
+	  {
+
+	  }
+
+	  if(0 == GPIO_DRV_ReadPinInput(PUSH_BUTTON2))
+	  {
+
+		  GPIO_DRV_ClearPinOutput(LEDRGB_BLUE);
+		  Delay_ms(300);
+		  GPIO_DRV_SetPinOutput(LEDRGB_BLUE);
+		  Delay_ms(300);
+		  GPIO_DRV_ClearPinOutput(LEDRGB_BLUE);
+		  Delay_ms(300);
+		  GPIO_DRV_SetPinOutput(LEDRGB_BLUE);
+		  SendNotGet = 0;
+		  Set_NRF24L_Rx_Mode();
+		  while(0 == GPIO_DRV_ReadPinInput(PUSH_BUTTON2))
+		  {
+
+		  }
+	  }
+	  else
+	  {
+
+	  }
+
   }
 
   /*** Don't write any code pass this line, or it will be deleted during code generation. ***/

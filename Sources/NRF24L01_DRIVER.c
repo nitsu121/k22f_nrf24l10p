@@ -17,26 +17,48 @@ void Clear_NRF_Int_Flags(void)
 	  unsigned char TempStatus = 0;
 	  TempStatus = Read_Status();
 	  Delay_ms(1);
-	  SendArray[0] = TempStatus & 0xF0;
-	  //Read_Status();
-	  //Write_Register(unsigned char RegisterNumber, unsigned char * SendArray, unsigned char * RecievedArray, unsigned char NumOfBytesToRead)
+	  SendArray[0] = TempStatus & 0xF1;
 	  Write_Register(0x07, SendArray, ReadArray, 1);
 }
 
+void Set_NRF24L_Rx_Mode()
+{
+	CE_OFF;
+	Delay_ms(100);
+	unsigned char SendArray[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+
+	Flush_Tx();
+	Flush_Rx();
+
+	SendArray[0] = 0x0F;
+	Write_Reg_Varified(0x00, SendArray, 1);
+
+	CE_ON;
+}
+
+void Set_NRF24L_Tx_Mode()
+{
+	CE_OFF;
+	Delay_ms(100);
+	unsigned char SendArray[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+
+	Flush_Tx();
+	Flush_Rx();
+
+	SendArray[0] = 0x0E;
+	Write_Reg_Varified(0x00, SendArray, 1);
+}
+
+
 void Init_NRF24L(void)
 {
-	unsigned char TempValue = 0;
-
 	  CE_OFF;
 	  Delay_ms(100);
-	  //Write_Register(unsigned char RegisterNumber, unsigned char * SendArray, unsigned char * RecievedArray, unsigned char NumOfBytesToRead)
 	  unsigned char SendArray[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 	  unsigned char ReadArray[10];
 
 
 	  SendArray[0] = 0x26; //TX not-power-up 2_byte_CRC EnableCRC
-	  //
-	  //unsigned char Write_Reg_Varified(unsigned char RegisterNumber, unsigned char * SendArray, unsigned char NumOfBytesToRead)
 	  Write_Reg_Varified(6, SendArray, 1);
 
 	  SendArray[0] = 0x05;
@@ -51,7 +73,6 @@ void Init_NRF24L(void)
 	  SendArray[3] = 0x44;
 	  SendArray[4] = 0x55;
 	  Write_Register(0x0A, SendArray, ReadArray, 5);
-	  //Write_Reg_Varified(0x0A, SendArray, 5);
 
 	  SendArray[0] = 0x11;
 	  SendArray[1] = 0x22;
@@ -59,7 +80,6 @@ void Init_NRF24L(void)
 	  SendArray[3] = 0x44;
 	  SendArray[4] = 0x55;
 	  Write_Register(0x10, SendArray, ReadArray, 5);
-	  //Write_Reg_Varified(0x10, SendArray, 5);
 
 	  SendArray[0] = 0x01;
 	  Write_Reg_Varified(0x02, SendArray, 1);
@@ -77,87 +97,7 @@ void Init_NRF24L(void)
 
 	  SendArray[0] = 0x0E;
 	  Write_Reg_Varified(0x00, SendArray, 1);
-
-#if 0
-	  Write_Reg_Varified(0, SendArray, 1);
-	  //
-
-	  SendArray[0] = 0x00;
-	  Write_Reg_Varified(1, SendArray, 1);
-
-	  SendArray[0] = 0x01; //disable autoacknak
-	  Write_Reg_Varified(2, SendArray, 1);
-
-	  SendArray[0] = 0x03;
-	  Write_Reg_Varified(3, SendArray, 1);
-
-	  SendArray[0] = 0x00;
-	  Write_Reg_Varified(4, SendArray, 1);
-
-	  SendArray[0] = 0x02;
-	  Write_Reg_Varified(5, SendArray, 1);
-
-	  SendArray[0] = 0x07;
-	  Write_Reg_Varified(6, SendArray, 1);
-
-	  SendArray[0] = 0xE7;
-	  SendArray[1] = 0xE7;
-	  SendArray[2] = 0xE7;
-	  SendArray[3] = 0xE7;
-	  SendArray[4] = 0xE7;
-	  Write_Reg_Varified(0x10, SendArray, 5);
-#endif
-
 }
-
-
-#if 0
-void Init_NRF24L(void)
-{
-	unsigned char TempValue = 0;
-
-	  CE_OFF;
-	  Delay_ms(100);
-	  //Write_Register(unsigned char RegisterNumber, unsigned char * SendArray, unsigned char * RecievedArray, unsigned char NumOfBytesToRead)
-	  unsigned char SendArray[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-	  unsigned char ReadArray[10];
-
-
-	  SendArray[0] = 0x0C; //TX not-power-up 2_byte_CRC EnableCRC
-	  //
-	  //unsigned char Write_Reg_Varified(unsigned char RegisterNumber, unsigned char * SendArray, unsigned char NumOfBytesToRead)
-	  Write_Reg_Varified(0, SendArray, 1);
-	  //
-
-	  SendArray[0] = 0x00;
-	  Write_Reg_Varified(1, SendArray, 1);
-
-	  SendArray[0] = 0x01; //disable autoacknak
-	  Write_Reg_Varified(2, SendArray, 1);
-
-	  SendArray[0] = 0x03;
-	  Write_Reg_Varified(3, SendArray, 1);
-
-	  SendArray[0] = 0x00;
-	  Write_Reg_Varified(4, SendArray, 1);
-
-	  SendArray[0] = 0x02;
-	  Write_Reg_Varified(5, SendArray, 1);
-
-	  SendArray[0] = 0x07;
-	  Write_Reg_Varified(6, SendArray, 1);
-
-	  SendArray[0] = 0xE7;
-	  SendArray[1] = 0xE7;
-	  SendArray[2] = 0xE7;
-	  SendArray[3] = 0xE7;
-	  SendArray[4] = 0xE7;
-	  Write_Reg_Varified(0x10, SendArray, 5);
-
-
-}
-#endif
-
 
 unsigned char Write_Reg_Varified(unsigned char RegisterNumber, unsigned char * SendArray, unsigned char NumOfBytesToRead)
 {
@@ -184,7 +124,6 @@ unsigned char Read_Register(unsigned char RegisterNumber, unsigned char * Reciev
 	unsigned char Counter = 0;
 	TempSendArray[0] = RegisterNumber | R_REGISTER;
 
-	//DSPI_DRV_MasterTransferBlocking(FSL_DSPICOM1, NULL, &Send[0], Read, 5, 10000);
 	DSPI_DRV_MasterTransferBlocking(FSL_DSPICOM1, NULL, TempSendArray, TempReadArray, NumOfBytesToRead + 1, 10000);
 	ReturnFlag = TempReadArray[0];
 
@@ -210,8 +149,7 @@ unsigned char Write_Register(unsigned char RegisterNumber, unsigned char * SendA
 		TempSendArray[Counter + 1] = SendArray[Counter];
 		Counter++;
 	}
-	//DSPI_DRV_MasterInit(FSL_DSPICOM1, &dspiCom1_MasterState, &dspiCom1_MasterConfig0);
-	//DSPI_DRV_MasterTransferBlocking(FSL_DSPICOM1, NULL, &Send[0], Read, 5, 10000);
+
 	DSPI_DRV_MasterTransferBlocking(FSL_DSPICOM1, NULL, TempSendArray, TempReadArray, NumOfBytesToRead + 1, 10000);
 	ReturnFlag = TempReadArray[0];
 
@@ -226,10 +164,33 @@ unsigned char Write_Register(unsigned char RegisterNumber, unsigned char * SendA
 	return (ReturnFlag);
 }
 
+
+unsigned char ReadPayload(unsigned char * ReadArray, unsigned char NumberOfBytesToRead)
+{
+	unsigned char ReturnFlag = 0;
+	unsigned char TempSendArray[100];
+	unsigned char TempReadArray[100];
+	unsigned char Count = 0;
+	TempSendArray[0] = R_RX_PAYLOAD;
+
+	DSPI_DRV_MasterTransferBlocking(FSL_DSPICOM1, NULL, TempSendArray, TempReadArray, NumberOfBytesToRead + 1, 10000);
+
+	while(NumberOfBytesToRead > Count)
+	{
+
+		ReadArray[Count] = TempReadArray[Count + 1];
+		Count++;
+	}
+
+	Flush_Rx();
+
+	return (ReturnFlag);
+}
+
+
 unsigned char Send_Last_Payload(unsigned char NumberOfTimesToSend)
 {
 	unsigned char ReturnFlag = 0;
-
 	return (ReturnFlag);
 }
 
@@ -237,7 +198,6 @@ unsigned char Read_Status()
 {
 	unsigned char ReturnFlag = 0;
 	unsigned char ReadArray[2] = {0, 0};
-	//unsigned char Read_Register(unsigned char RegisterNumber, unsigned char * RecieveArray, unsigned char NumOfBytesToRead)
 	Read_Register(0x07, ReadArray, 1);
 	ReturnFlag = ReadArray[0];
 	return (ReturnFlag);

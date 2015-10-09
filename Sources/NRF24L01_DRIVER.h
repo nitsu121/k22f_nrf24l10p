@@ -55,6 +55,8 @@
 #define CE_ON GPIO_DRV_SetPinOutput(CE)
 
 void Init_NRF24L(void);
+void Set_NRF24L_Rx_Mode(void);
+void Set_NRF24L_Tx_Mode(void);
 unsigned char Read_Register(unsigned char RegisterNumber, unsigned char * RecieveArray, unsigned char NumOfBytesToRead);
 unsigned char Write_Register(unsigned char RegisterNumber, unsigned char * SendArray, unsigned char * RecievedArray, unsigned char NumOfBytesToRead);
 unsigned char Write_Reg_Varified(unsigned char RegisterNumber, unsigned char * SendArray, unsigned char NumOfBytesToRead);
@@ -64,6 +66,8 @@ unsigned char Flush_Tx(void);
 unsigned char Flush_Rx(void);
 unsigned char SendNewPayload(unsigned char * PayloadArrayToSend, unsigned char NumberOfBytesToSend);
 void Clear_NRF_Int_Flags(void);
+unsigned char ReadPayload(unsigned char * ReadArray, unsigned char NumberOfBytesToRead);
+
 
 
 #endif /* SOURCES_NRF24L01_DRIVER_H_ */
