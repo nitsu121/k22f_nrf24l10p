@@ -206,5 +206,21 @@
       <EmptySection_DummyValue />
     </Events>
   </Bean>
+  <Bean name="pitTimer1" type="fsl_pit">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="pitTimer1" />
+      <Device v="PIT" />
+      <Counter v="PIT_CVAL0" />
+      <Counter_type v="Down counter" />
+      <Component_version v="1.2.0" />
+    </Properties>
+    <Methods>
+      <EmptySection_DummyValue />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
+    </Events>
+  </Bean>
 </PE_PROJECT_SETTINGS_DOCUMENTATION>
 

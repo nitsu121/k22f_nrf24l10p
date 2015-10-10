@@ -6,32 +6,38 @@
 C_SRCS += \
 ../Generated_Code/Cpu.c \
 ../Generated_Code/clockMan1.c \
+../Generated_Code/dmaController1.c \
 ../Generated_Code/dspiCom1.c \
 ../Generated_Code/gpio1.c \
 ../Generated_Code/hardware_init.c \
 ../Generated_Code/osa1.c \
 ../Generated_Code/pin_init.c \
-../Generated_Code/pitTimer1.c 
+../Generated_Code/pitTimer1.c \
+../Generated_Code/uartCom1.c 
 
 OBJS += \
 ./Generated_Code/Cpu.o \
 ./Generated_Code/clockMan1.o \
+./Generated_Code/dmaController1.o \
 ./Generated_Code/dspiCom1.o \
 ./Generated_Code/gpio1.o \
 ./Generated_Code/hardware_init.o \
 ./Generated_Code/osa1.o \
 ./Generated_Code/pin_init.o \
-./Generated_Code/pitTimer1.o 
+./Generated_Code/pitTimer1.o \
+./Generated_Code/uartCom1.o 
 
 C_DEPS += \
 ./Generated_Code/Cpu.d \
 ./Generated_Code/clockMan1.d \
+./Generated_Code/dmaController1.d \
 ./Generated_Code/dspiCom1.d \
 ./Generated_Code/gpio1.d \
 ./Generated_Code/hardware_init.d \
 ./Generated_Code/osa1.d \
 ./Generated_Code/pin_init.d \
-./Generated_Code/pitTimer1.d 
+./Generated_Code/pitTimer1.d \
+./Generated_Code/uartCom1.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

@@ -209,6 +209,14 @@ Module "pin_init"  (component PinSettings)
                 This method is enabled only if any pin of corresponding peripheral type is selected. Selected pins are either 
                 user selected pins or pins selected in pin items in components. Call this method code to route desired pins 
                 into TPIU peripheral.
+   - pin_init_init_uart_pins -UART method configures registers according to settings  of routing and electrical features. This 
+                method is enabled only if any pin of corresponding peripheral type is selected. Selected pins are either user 
+                selected pins or pins selected in pin items in components. Call this method code to route desired pins into 
+                UART0, UART1, UART2 peripherals.
+   - pin_init_deinit_uart_pins -UART method configures registers according to settings  of routing and electrical features. 
+                This method is enabled only if any pin of corresponding peripheral type is selected. Selected pins are either 
+                user selected pins or pins selected in pin items in components. Call this method code to route desired pins 
+                into UART0, UART1, UART2 peripherals.
 
 Module "intMan1"   (component fsl_interrupt_manager)
    - intMan1_INT_SYS_InstallHandler -Installs an interrupt handler routine for a given IRQ number.
@@ -307,6 +315,41 @@ Module "pitTimer1" (component fsl_pit)
    - pitTimer1_PIT_DRV_DelayUs -Delays the specific microseconds.
    - pitTimer1_PIT_DRV_ClearIntFlag -Clears the timer interrupt flag.
    - pitTimer1_PIT_DRV_IsIntPending -Reads the current timer timeout flag.
+
+Module "uartCom1"  (component fsl_uart)
+   - uartCom1_UART_DRV_Init -Initializes an UART instance for operation.
+   - uartCom1_UART_DRV_Deinit -Shuts down the UART by disabling interrupts and the transmitter/receiver.
+   - uartCom1_UART_DRV_InstallRxCallback -Installs the callback function for the UART receive.
+   - uartCom1_UART_DRV_InstallTxCallback -Installs the callback function for the UART transmit.
+   - uartCom1_UART_DRV_SendDataBlocking -Sends (transmits) data out through the UART module using a blocking method.
+   - uartCom1_UART_DRV_SendData -Sends (transmits) data through the UART module using a non-blocking method.
+   - uartCom1_UART_DRV_GetTransmitStatus -Returns whether the previous UART transmit has finished.
+   - uartCom1_UART_DRV_AbortSendingData -Terminates an asynchronous UART transmission early.
+   - uartCom1_UART_DRV_ReceiveDataBlocking -Gets (receives) data from the UART module using a blocking method.
+   - uartCom1_UART_DRV_ReceiveData -Gets (receives) data from the UART module using a non-blocking method.
+   - uartCom1_UART_DRV_GetReceiveStatus -Returns whether the previous UART receive is complete.
+   - uartCom1_UART_DRV_AbortReceivingData -Terminates an asynchronous UART receive early.
+
+Module "dmaController1" (component fsl_edma)
+   - dmaController1_EDMA_DRV_Init -Initializes all eDMA modules in an SOC.
+   - dmaController1_EDMA_DRV_Deinit -Shuts down all eDMA modules.
+   - dmaController1_EDMA_DRV_RequestChannel -Requests an eDMA channel dynamically or statically.
+   - dmaController1_EDMA_DRV_ReleaseChannel -Releases an eDMA channel.
+   - dmaController1_EDMA_DRV_PrepareDescriptorTransfer -Sets the descriptor basic transfer for the descriptor.
+   - dmaController1_EDMA_DRV_PrepareDescriptorScatterGather -Configures the memory address for the next transfer TCD for the 
+                software TCD.
+   - dmaController1_EDMA_DRV_PrepareDescriptorChannelLink -Configures the major channel link the software TCD.
+   - dmaController1_EDMA_DRV_PushDescriptorToReg -Copies the software TCD configuration to the hardware TCD.
+   - dmaController1_EDMA_DRV_ConfigLoopTransfer -Configures the DMA transfer in a scatter-gather mode.
+   - dmaController1_EDMA_DRV_ConfigScatterGatherTransfer -Configures the DMA transfer in a scatter-gather mode.
+   - dmaController1_EDMA_DRV_StartChannel -Starts an eDMA channel.
+   - dmaController1_EDMA_DRV_StopChannel -Stops the eDMA channel.
+   - dmaController1_EDMA_DRV_InstallCallback -Registers the callback function and the parameter for eDMA channel.
+   - dmaController1_EDMA_DRV_IRQHandler -IRQ Handler for eDMA channel interrupt.
+   - dmaController1_EDMA_DRV_ErrorIRQHandler -ERROR IRQ Handler for eDMA channel interrupt.
+   - dmaController1_EDMA_DRV_GetChannelStatus -Gets the eDMA channel status.
+   - dmaController1_EDMA_DRV_GetUnfinishedBytes -Gets the unfinished bytes for the eDMA channel current TCD.
+   - dmaController1_EDMA_DRV_GetFinishedBytes -Gets the bytes already transferred for the eDMA channel current TCD.
 
 Module "Cpu"       (component MK22FN512LH12_4SDK)
    - Cpu_SystemInit -This method configures the oscillator (PLL) that is part of the microcontroller device. SystemInit is 

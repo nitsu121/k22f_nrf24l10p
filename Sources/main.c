@@ -36,6 +36,8 @@
 #include "gpio1.h"
 #include "dspiCom1.h"
 #include "pitTimer1.h"
+#include "uartCom1.h"
+#include "dmaController1.h"
 #include "NRF24L01_DRIVER.h"
 
 #if CPU_INIT_CONFIG
@@ -55,29 +57,43 @@ int main(void)
 
   /* Write your code here */
   /* For example: for(;;) { } */
+  unsigned char SendArray[5] = {'J', 'U', 'S', 'T', 'I'};
+  unsigned char ReadArray[100];
+
   Delay_ms(1000);
   GPIO_DRV_ClearPinOutput(LEDRGB_BLUE);
   Delay_ms(1000);
   GPIO_DRV_SetPinOutput(LEDRGB_BLUE);
 
   Init_NRF24L();
-
+  UART_DRV_SendDataBlocking(FSL_UARTCOM1,SendArray, 5, 1000);
+  // UART_DRV_Init(FSL_UARTCOM1,&uartCom1_State,&uartCom1_InitConfig0);
   GPIO_DRV_ClearPinOutput(LEDRGB_BLUE);
   Delay_ms(1000);
   GPIO_DRV_SetPinOutput(LEDRGB_BLUE);
-  unsigned char SendArray[5] = {'J', 'U', 'S', 'T', 'I'};
-  unsigned char ReadArray[100];
+
 
   //GPIO_DRV_ClearPinOutput(LEDRGB_RED);
   Delay_ms(1000);
   //GPIO_DRV_SetPinOutput(LEDRGB_RED);
   //LEDRGB_RED
 
-  unsigned char SendNotGet = 1;
+  unsigned char SendNotGet = 0;
+
+
+  if(1 == SendNotGet)
+  {
+	  Set_NRF24L_Tx_Mode();
+  }
+  else
+  {
+	  Set_NRF24L_Rx_Mode();
+  }
+
 
   while(1)
   {
-	  Delay_ms(10);
+	  Delay_ms(1000);
 	  //GPIO_DRV_SetPinOutput(LEDRGB_BLUE);
 
 	  //GPIO_DRV_ReadPinInput(uint32_t pinName);
@@ -100,6 +116,7 @@ int main(void)
 		  {
 			  GPIO_DRV_ClearPinOutput(LEDRGB_BLUE);
 			  ReadPayload(ReadArray, 5);
+			  UART_DRV_SendDataBlocking(FSL_UARTCOM1,ReadArray, 5, 1000);
 			  Clear_NRF_Int_Flags();
 		  }
 	  }

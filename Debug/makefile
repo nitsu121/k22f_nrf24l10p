@@ -14,6 +14,7 @@ RM := rm -rf
 -include SDK/platform/system/src/clock/MK22F51212/subdir.mk
 -include SDK/platform/system/src/clock/subdir.mk
 -include SDK/platform/osa/src/subdir.mk
+-include SDK/platform/hal/src/uart/subdir.mk
 -include SDK/platform/hal/src/sim/MK22F51212/subdir.mk
 -include SDK/platform/hal/src/rtc/subdir.mk
 -include SDK/platform/hal/src/port/subdir.mk
@@ -21,10 +22,14 @@ RM := rm -rf
 -include SDK/platform/hal/src/osc/subdir.mk
 -include SDK/platform/hal/src/mcg/subdir.mk
 -include SDK/platform/hal/src/gpio/subdir.mk
+-include SDK/platform/hal/src/edma/subdir.mk
 -include SDK/platform/hal/src/dspi/subdir.mk
+-include SDK/platform/hal/src/dmamux/subdir.mk
+-include SDK/platform/drivers/src/uart/subdir.mk
 -include SDK/platform/drivers/src/rtc/subdir.mk
 -include SDK/platform/drivers/src/pit/subdir.mk
 -include SDK/platform/drivers/src/gpio/subdir.mk
+-include SDK/platform/drivers/src/edma/subdir.mk
 -include SDK/platform/drivers/src/dspi/subdir.mk
 -include SDK/platform/devices/MK22F51212/startup/gcc/subdir.mk
 -include SDK/platform/devices/MK22F51212/startup/subdir.mk

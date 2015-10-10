@@ -37,6 +37,8 @@
 #include "gpio1.h"
 #include "dspiCom1.h"
 #include "pitTimer1.h"
+#include "uartCom1.h"
+#include "dmaController1.h"
 
 #ifdef __cplusplus
 extern "C" {

@@ -35,13 +35,21 @@ Sources/Events.o: ../Sources/Events.c \
  C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_dspi_shared_function.h \
  C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/hal/inc/fsl_pit_hal.h \
  C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_pit_driver.h \
+ C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/hal/inc/fsl_uart_hal.h \
+ C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_uart_driver.h \
+ C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/hal/inc/fsl_dmamux_hal.h \
+ C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/hal/inc/fsl_edma_hal.h \
+ C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_edma_driver.h \
+ C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_edma_request.h \
  ../Sources/Events.h \
  C:/freescale/workspace.kds/K22F-NRF24-Test/Generated_Code/clockMan1.h \
  C:/freescale/workspace.kds/K22F-NRF24-Test/Generated_Code/pin_init.h \
  C:/freescale/workspace.kds/K22F-NRF24-Test/Generated_Code/osa1.h \
  C:/freescale/workspace.kds/K22F-NRF24-Test/Generated_Code/gpio1.h \
  C:/freescale/workspace.kds/K22F-NRF24-Test/Generated_Code/dspiCom1.h \
- C:/freescale/workspace.kds/K22F-NRF24-Test/Generated_Code/pitTimer1.h
+ C:/freescale/workspace.kds/K22F-NRF24-Test/Generated_Code/pitTimer1.h \
+ C:/freescale/workspace.kds/K22F-NRF24-Test/Generated_Code/uartCom1.h \
+ C:/freescale/workspace.kds/K22F-NRF24-Test/Generated_Code/dmaController1.h
 
 C:/freescale/workspace.kds/K22F-NRF24-Test/Generated_Code/Cpu.h:
 
@@ -115,6 +123,18 @@ C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/hal/inc/fsl_pit_hal.h:
 
 C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_pit_driver.h:
 
+C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/hal/inc/fsl_uart_hal.h:
+
+C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_uart_driver.h:
+
+C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/hal/inc/fsl_dmamux_hal.h:
+
+C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/hal/inc/fsl_edma_hal.h:
+
+C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_edma_driver.h:
+
+C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_edma_request.h:
+
 ../Sources/Events.h:
 
 C:/freescale/workspace.kds/K22F-NRF24-Test/Generated_Code/clockMan1.h:
@@ -128,3 +148,7 @@ C:/freescale/workspace.kds/K22F-NRF24-Test/Generated_Code/gpio1.h:
 C:/freescale/workspace.kds/K22F-NRF24-Test/Generated_Code/dspiCom1.h:
 
 C:/freescale/workspace.kds/K22F-NRF24-Test/Generated_Code/pitTimer1.h:
+
+C:/freescale/workspace.kds/K22F-NRF24-Test/Generated_Code/uartCom1.h:
+
+C:/freescale/workspace.kds/K22F-NRF24-Test/Generated_Code/dmaController1.h:

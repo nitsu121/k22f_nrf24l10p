@@ -7,7 +7,7 @@
 **     Version     : Component 1.2.0, Driver 1.4, CPU db: 3.00.000
 **     Repository  : KSDK 1.2.0
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-09-18, 10:49, # CodeGen: 1
+**     Date/Time   : 2015-10-10, 00:39, # CodeGen: 16
 **     Abstract    :
 **
 **     Settings    :
@@ -930,6 +930,8 @@
 **         deinit_spi_pins        - void deinit_spi_pins(uint32_t instance);
 **         init_tpiu_pins         - void init_tpiu_pins(uint32_t instance);
 **         deinit_tpiu_pins       - void deinit_tpiu_pins(uint32_t instance);
+**         init_uart_pins         - void init_uart_pins(uint32_t instance);
+**         deinit_uart_pins       - void deinit_uart_pins(uint32_t instance);
 **
 **     Copyright : 1997 - 2015 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.

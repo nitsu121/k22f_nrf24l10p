@@ -7,7 +7,7 @@
 **     Version     : Component 1.2.0, Driver 1.4, CPU db: 3.00.000
 **     Repository  : KSDK 1.2.0
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-10-01, 16:54, # CodeGen: 10
+**     Date/Time   : 2015-10-10, 00:39, # CodeGen: 16
 **     Abstract    :
 **
 **     Settings    :
@@ -1201,6 +1201,42 @@ void init_tpiu_pins(uint32_t instance)
 void deinit_tpiu_pins(uint32_t instance)
 {
   PORT_HAL_SetMuxMode(PORTA,2UL,kPortPinDisabled);
+}
+/*FUNCTION**********************************************************************
+*
+* Function Name : init_uart_pins
+* Description   : UART method sets registers according routing settings.
+* Call this method code to route desired pins.
+*END**************************************************************************/
+void init_uart_pins(uint32_t instance)
+{
+  switch(instance) {    
+    case UART0_IDX:                     /* UART0_IDX */
+      /* Affects PORTD_PCR6 register */
+      PORT_HAL_SetMuxMode(PORTD,6UL,kPortMuxAlt3);
+      /* Affects PORTD_PCR7 register */
+      PORT_HAL_SetMuxMode(PORTD,7UL,kPortMuxAlt3);
+      break;
+    default:
+      break;
+  }
+}
+/*FUNCTION**********************************************************************
+*
+* Function Name : deinit_uart_pins
+* Description   : UART method sets registers according routing settings.
+* Call this method code to disable routing of desired pins.
+*END**************************************************************************/
+void deinit_uart_pins(uint32_t instance)
+{
+  switch(instance) {    
+    case UART0_IDX:                     /* UART0_IDX */
+      PORT_HAL_SetMuxMode(PORTD,6UL,kPortPinDisabled);
+      PORT_HAL_SetMuxMode(PORTD,7UL,kPortPinDisabled);
+      break;
+    default:
+      break;
+  }
 }
 
 

@@ -346,11 +346,11 @@
 			</tr>
 			<tr>
 				<td>63</td><td>ADC0_SE7b/PTD6/LLWU_P15/SPI0_PCS3/UART0_RX/FTM0_CH6/FBa_AD0/FTM0_FLT0/SPI1_SOUT</td><td>J2_8</td>
-				<td bgcolor='#F8FF9A'>ADC0</td><td bgcolor='#F8FF9A'>adc_seb7</td><td bgcolor='#F8FF9A'>alt0</td><td bgcolor='#F8FF9A'>Input</td>
+				<td bgcolor='#00CA3A'>UART0</td><td bgcolor='#00CA3A'>uart_rx</td><td bgcolor='#00CA3A'>alt3</td><td bgcolor='#00CA3A'>Input</td>
 			</tr>
 			<tr>
 				<td>64</td><td>PTD7/UART0_TX/FTM0_CH7/FTM0_FLT1/SPI1_SIN</td><td>J2_10</td>
-				<td></td><td></td><td></td><td></td>
+				<td bgcolor='#00CA3A'>UART0</td><td bgcolor='#00CA3A'>uart_tx</td><td bgcolor='#00CA3A'>alt3</td><td bgcolor='#00CA3A'>Output</td>
 			</tr>
 		</table>
 
@@ -1488,11 +1488,11 @@
 			</tr>
 			<tr>
 				<td>63</td><td>ADC0_SE7b/PTD6/LLWU_P15/SPI0_PCS3/UART0_RX/FTM0_CH6/FBa_AD0/FTM0_FLT0/SPI1_SOUT</td><td>J2_8</td>
-				<td bgcolor='#F8FF9A'>ADC0</td><td bgcolor='#F8FF9A'>adc_seb7</td><td bgcolor='#F8FF9A'>alt0</td><td bgcolor='#F8FF9A'>Input</td>
+				<td bgcolor='#00CA3A'>UART0</td><td bgcolor='#00CA3A'>uart_rx</td><td bgcolor='#00CA3A'>alt3</td><td bgcolor='#00CA3A'>Input</td>
 			</tr>
 			<tr>
 				<td>64</td><td>PTD7/UART0_TX/FTM0_CH7/FTM0_FLT1/SPI1_SIN</td><td>J2_10</td>
-				<td></td><td></td><td></td><td></td>
+				<td bgcolor='#00CA3A'>UART0</td><td bgcolor='#00CA3A'>uart_tx</td><td bgcolor='#00CA3A'>alt3</td><td bgcolor='#00CA3A'>Output</td>
 			</tr>
 		</table>
 

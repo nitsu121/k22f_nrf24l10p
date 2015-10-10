@@ -8,7 +8,7 @@
 **     Repository  : KSDK 1.2.0
 **     Datasheet   : K22P121M120SF7RM, Rev. 1, March 24, 2014
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-09-18, 11:05, # CodeGen: 2
+**     Date/Time   : 2015-10-10, 01:40, # CodeGen: 18
 **     Abstract    :
 **
 **     Settings    :
@@ -122,6 +122,13 @@ void Components_Init(void)
   PIT_DRV_InitChannel(FSL_PITTIMER1,FSL_PITTIMER1_CHANNEL,&pitTimer1_InitConfig0);
   PIT_DRV_StartTimer(FSL_PITTIMER1,FSL_PITTIMER1_CHANNEL);
   /*! pitTimer1 Auto initialization end */
+  /*! uartCom1 Auto initialization start */
+  UART_DRV_Init(FSL_UARTCOM1,&uartCom1_State,&uartCom1_InitConfig0);
+  /*! uartCom1 Auto initialization end */
+  /*! dmaController1 Auto initialization start */
+  EDMA_DRV_Init(&dmaController1_State,&dmaController1_InitConfig0);
+  /*! dmaController1 Auto initialization end */
+  
 }
 #endif /* CPU_COMPONENTS_INIT */
 

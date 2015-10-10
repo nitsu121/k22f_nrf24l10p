@@ -32,7 +32,13 @@ Generated_Code/clockMan1.o: ../Generated_Code/clockMan1.c \
  C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_dspi_slave_driver.h \
  C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_dspi_shared_function.h \
  C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/hal/inc/fsl_pit_hal.h \
- C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_pit_driver.h
+ C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_pit_driver.h \
+ C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/hal/inc/fsl_uart_hal.h \
+ C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_uart_driver.h \
+ C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/hal/inc/fsl_dmamux_hal.h \
+ C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/hal/inc/fsl_edma_hal.h \
+ C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_edma_driver.h \
+ C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_edma_request.h
 
 ../Generated_Code/clockMan1.h:
 
@@ -103,3 +109,15 @@ C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_dspi_sha
 C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/hal/inc/fsl_pit_hal.h:
 
 C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_pit_driver.h:
+
+C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/hal/inc/fsl_uart_hal.h:
+
+C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_uart_driver.h:
+
+C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/hal/inc/fsl_dmamux_hal.h:
+
+C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/hal/inc/fsl_edma_hal.h:
+
+C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_edma_driver.h:
+
+C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_edma_request.h:
