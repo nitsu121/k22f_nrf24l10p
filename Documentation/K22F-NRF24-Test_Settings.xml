@@ -250,5 +250,19 @@
       <EmptySection_DummyValue />
     </Events>
   </Bean>
+  <Bean name="flexTimer1" type="fsl_ftm">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="flexTimer1" />
+      <Device v="FTM1" />
+      <Component_version v="1.2.0" />
+    </Properties>
+    <Methods>
+      <EmptySection_DummyValue />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
+    </Events>
+  </Bean>
 </PE_PROJECT_SETTINGS_DOCUMENTATION>
 

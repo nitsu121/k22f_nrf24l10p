@@ -8,7 +8,7 @@
 **     Repository  : KSDK 1.2.0
 **     Datasheet   : K22P121M120SF7RM, Rev. 1, March 24, 2014
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-10-10, 01:40, # CodeGen: 18
+**     Date/Time   : 2015-10-11, 15:10, # CodeGen: 20
 **     Abstract    :
 **
 **     Settings    :
@@ -128,6 +128,14 @@ void Components_Init(void)
   /*! dmaController1 Auto initialization start */
   EDMA_DRV_Init(&dmaController1_State,&dmaController1_InitConfig0);
   /*! dmaController1 Auto initialization end */
+  
+  /*! flexTimer1 Auto initialization start */
+  FTM_DRV_Init(FSL_FLEXTIMER1,&flexTimer1_InitConfig0);
+  FTM_DRV_SetClock(FSL_FLEXTIMER1, kClock_source_FTM_SystemClk, kFtmDividedBy128);
+  FTM_DRV_PwmStart(FSL_FLEXTIMER1,&flexTimer1_ChnConfig0,0U);
+  FTM_DRV_SetTimeOverflowIntCmd(FSL_FLEXTIMER1,false);
+  FTM_DRV_SetFaultIntCmd(FSL_FLEXTIMER1,false);
+  /*! flexTimer1 Auto initialization end */
   
 }
 #endif /* CPU_COMPONENTS_INIT */

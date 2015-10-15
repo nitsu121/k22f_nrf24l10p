@@ -42,6 +42,8 @@ Generated_Code/pitTimer1.o: ../Generated_Code/pitTimer1.c \
  C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/hal/inc/fsl_edma_hal.h \
  C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_edma_driver.h \
  C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_edma_request.h \
+ C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/hal/inc/fsl_ftm_hal.h \
+ C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_ftm_driver.h \
  C:/freescale/workspace.kds/K22F-NRF24-Test/Generated_Code/pin_init.h \
  C:/freescale/workspace.kds/K22F-NRF24-Test/Generated_Code/osa1.h \
  C:/freescale/workspace.kds/K22F-NRF24-Test/Generated_Code/gpio1.h \
@@ -49,6 +51,7 @@ Generated_Code/pitTimer1.o: ../Generated_Code/pitTimer1.c \
  C:/freescale/workspace.kds/K22F-NRF24-Test/Generated_Code/pitTimer1.h \
  C:/freescale/workspace.kds/K22F-NRF24-Test/Generated_Code/uartCom1.h \
  C:/freescale/workspace.kds/K22F-NRF24-Test/Generated_Code/dmaController1.h \
+ C:/freescale/workspace.kds/K22F-NRF24-Test/Generated_Code/flexTimer1.h \
  ../Generated_Code/pitTimer1.h
 
 C:/freescale/workspace.kds/K22F-NRF24-Test/Sources/Events.h:
@@ -137,6 +140,10 @@ C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_edma_dri
 
 C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_edma_request.h:
 
+C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/hal/inc/fsl_ftm_hal.h:
+
+C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_ftm_driver.h:
+
 C:/freescale/workspace.kds/K22F-NRF24-Test/Generated_Code/pin_init.h:
 
 C:/freescale/workspace.kds/K22F-NRF24-Test/Generated_Code/osa1.h:
@@ -150,5 +157,7 @@ C:/freescale/workspace.kds/K22F-NRF24-Test/Generated_Code/pitTimer1.h:
 C:/freescale/workspace.kds/K22F-NRF24-Test/Generated_Code/uartCom1.h:
 
 C:/freescale/workspace.kds/K22F-NRF24-Test/Generated_Code/dmaController1.h:
+
+C:/freescale/workspace.kds/K22F-NRF24-Test/Generated_Code/flexTimer1.h:
 
 ../Generated_Code/pitTimer1.h:

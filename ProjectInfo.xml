@@ -57,6 +57,7 @@
       <Path>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\devices\</Path>
       <Path>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\drivers\src\dspi\</Path>
       <Path>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\drivers\src\edma\</Path>
+      <Path>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\drivers\src\ftm\</Path>
       <Path>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\drivers\src\gpio\</Path>
       <Path>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\drivers\src\pit\</Path>
       <Path>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\drivers\src\rtc\</Path>
@@ -64,6 +65,7 @@
       <Path>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\hal\src\dmamux\</Path>
       <Path>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\hal\src\dspi\</Path>
       <Path>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\hal\src\edma\</Path>
+      <Path>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\hal\src\ftm\</Path>
       <Path>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\hal\src\gpio\</Path>
       <Path>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\hal\src\mcg\</Path>
       <Path>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\hal\src\osc\</Path>
@@ -87,6 +89,7 @@
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\Generated_Code\clockMan1.c</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\Generated_Code\dmaController1.c</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\Generated_Code\dspiCom1.c</PathName>
+      <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\Generated_Code\flexTimer1.c</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\Generated_Code\gpio1.c</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\Generated_Code\hardware_init.c</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\Generated_Code\osa1.c</PathName>
@@ -101,6 +104,8 @@
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\drivers\src\dspi\fsl_dspi_slave_driver.c</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\drivers\src\edma\fsl_edma_common.c</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\drivers\src\edma\fsl_edma_driver.c</PathName>
+      <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\drivers\src\ftm\fsl_ftm_common.c</PathName>
+      <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\drivers\src\ftm\fsl_ftm_driver.c</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\drivers\src\gpio\fsl_gpio_common.c</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\drivers\src\gpio\fsl_gpio_driver.c</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\drivers\src\pit\fsl_pit_common.c</PathName>
@@ -111,6 +116,7 @@
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\hal\src\dmamux\fsl_dmamux_hal.c</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\hal\src\dspi\fsl_dspi_hal.c</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\hal\src\edma\fsl_edma_hal.c</PathName>
+      <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\hal\src\ftm\fsl_ftm_hal.c</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\hal\src\gpio\fsl_gpio_hal.c</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\hal\src\mcg\fsl_mcg_hal.c</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\hal\src\mcg\fsl_mcg_hal_modes.c</PathName>
@@ -138,6 +144,7 @@
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\Generated_Code\clockMan1.h</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\Generated_Code\dmaController1.h</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\Generated_Code\dspiCom1.h</PathName>
+      <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\Generated_Code\flexTimer1.h</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\Generated_Code\gpio1.h</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\Generated_Code\osa1.h</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\Generated_Code\pin_init.h</PathName>
@@ -161,12 +168,14 @@
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\drivers\inc\fsl_dspi_slave_driver.h</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\drivers\inc\fsl_edma_driver.h</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\drivers\inc\fsl_edma_request.h</PathName>
+      <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\drivers\inc\fsl_ftm_driver.h</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\drivers\inc\fsl_gpio_driver.h</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\drivers\inc\fsl_pit_driver.h</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\drivers\inc\fsl_uart_driver.h</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\hal\inc\fsl_dmamux_hal.h</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\hal\inc\fsl_dspi_hal.h</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\hal\inc\fsl_edma_hal.h</PathName>
+      <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\hal\inc\fsl_ftm_hal.h</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\hal\inc\fsl_gpio_hal.h</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\hal\inc\fsl_mcg_hal.h</PathName>
       <PathName>C:\freescale\workspace.kds\K22F-NRF24-Test\SDK\platform\hal\inc\fsl_mcg_hal_modes.h</PathName>

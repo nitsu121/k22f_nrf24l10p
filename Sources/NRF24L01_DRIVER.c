@@ -16,7 +16,7 @@ void Clear_NRF_Int_Flags(void)
 	  unsigned char ReadArray[2];
 	  unsigned char TempStatus = 0;
 	  TempStatus = Read_Status();
-	  Delay_ms(1);
+	  //Delay_ms(1);
 	  SendArray[0] = TempStatus & 0xF1;
 	  Write_Register(0x07, SendArray, ReadArray, 1);
 }

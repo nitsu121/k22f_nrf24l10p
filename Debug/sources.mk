@@ -40,6 +40,7 @@ SDK/platform/hal/src/pit \
 SDK/platform/hal/src/osc \
 SDK/platform/hal/src/mcg \
 SDK/platform/hal/src/gpio \
+SDK/platform/hal/src/ftm \
 SDK/platform/hal/src/edma \
 SDK/platform/hal/src/dspi \
 SDK/platform/hal/src/dmamux \
@@ -47,6 +48,7 @@ SDK/platform/drivers/src/uart \
 SDK/platform/drivers/src/rtc \
 SDK/platform/drivers/src/pit \
 SDK/platform/drivers/src/gpio \
+SDK/platform/drivers/src/ftm \
 SDK/platform/drivers/src/edma \
 SDK/platform/drivers/src/dspi \
 SDK/platform/devices \

@@ -213,10 +213,9 @@
 				<td bgcolor='#FFE1C7'>RCM</td><td bgcolor='#FFE1C7'>reset</td><td bgcolor='#FFE1C7'>alt0</td><td bgcolor='#FFE1C7'>Input</td>
 			</tr>
 			<tr>
-				<td rowspan='2'>35</td><td rowspan='2'>ADC0_SE8/ADC1_SE8/PTB0/LLWU_P5/I2C0_SCL/FTM1_CH0/FTM1_QD_PHA</td><td rowspan='2'>J24_2</td>
-				<td bgcolor='#F8FF9A'>ADC0</td><td bgcolor='#F8FF9A'>adc_se8</td><td bgcolor='#F8FF9A'>alt0</td><td bgcolor='#F8FF9A'>Input</td>
+				<td>35</td><td>ADC0_SE8/ADC1_SE8/PTB0/LLWU_P5/I2C0_SCL/FTM1_CH0/FTM1_QD_PHA</td><td>J24_2</td>
+				<td bgcolor='#B3EAFF'>FTM1</td><td bgcolor='#B3EAFF'>tmr_ch0</td><td bgcolor='#B3EAFF'>alt3</td><td bgcolor='#B3EAFF'>Not Specified</td>
 			</tr>
-			<tr bgcolor='#F8FF9A'><td>ADC1</td><td>adc_se8</td><td>alt0</td><td>Input</td></tr>
 			<tr>
 				<td>36</td><td>ADC0_SE9/ADC1_SE9/PTB1/I2C0_SDA/FTM1_CH1/FTM1_QD_PHB</td><td>J24_4</td>
 				<td bgcolor='#F7DCFF'>PTB</td><td bgcolor='#F7DCFF'>port1</td><td bgcolor='#F7DCFF'>alt1</td><td bgcolor='#F7DCFF'>Output</td>
@@ -1355,10 +1354,9 @@
 				<td bgcolor='#FFE1C7'>RCM</td><td bgcolor='#FFE1C7'>reset</td><td bgcolor='#FFE1C7'>alt0</td><td bgcolor='#FFE1C7'>Input</td>
 			</tr>
 			<tr>
-				<td rowspan='2'>35</td><td rowspan='2'>ADC0_SE8/ADC1_SE8/PTB0/LLWU_P5/I2C0_SCL/FTM1_CH0/FTM1_QD_PHA</td><td rowspan='2'>J24_2</td>
-				<td bgcolor='#F8FF9A'>ADC0</td><td bgcolor='#F8FF9A'>adc_se8</td><td bgcolor='#F8FF9A'>alt0</td><td bgcolor='#F8FF9A'>Input</td>
+				<td>35</td><td>ADC0_SE8/ADC1_SE8/PTB0/LLWU_P5/I2C0_SCL/FTM1_CH0/FTM1_QD_PHA</td><td>J24_2</td>
+				<td bgcolor='#B3EAFF'>FTM1</td><td bgcolor='#B3EAFF'>tmr_ch0</td><td bgcolor='#B3EAFF'>alt3</td><td bgcolor='#B3EAFF'>Not Specified</td>
 			</tr>
-			<tr bgcolor='#F8FF9A'><td>ADC1</td><td>adc_se8</td><td>alt0</td><td>Input</td></tr>
 			<tr>
 				<td>36</td><td>ADC0_SE9/ADC1_SE9/PTB1/I2C0_SDA/FTM1_CH1/FTM1_QD_PHB</td><td>J24_4</td>
 				<td bgcolor='#F7DCFF'>PTB</td><td bgcolor='#F7DCFF'>port1</td><td bgcolor='#F7DCFF'>alt1</td><td bgcolor='#F7DCFF'>Output</td>

@@ -161,6 +161,14 @@ Module "pin_init"  (component PinSettings)
                 provides pin initialization for selected pins during processor start-up. Selected pins are either user selected 
                 pins or pins selected in pin properties in components.  Only pins of devices  enabled for auto initialization 
                 are handled within this method.
+   - pin_init_init_ftm_pins -FTM method configures registers according to settings  of routing and electrical features. This 
+                method is enabled only if any pin of corresponding peripheral type is selected. Selected pins are either user 
+                selected pins or pins selected in pin items in components. Call this method code to route desired pins into 
+                FTM0, FTM1, FTM2, FTM3 peripherals.
+   - pin_init_deinit_ftm_pins -FTM method configures registers according to settings  of routing and electrical features. This 
+                method is enabled only if any pin of corresponding peripheral type is selected. Selected pins are either user 
+                selected pins or pins selected in pin items in components. Call this method code to route desired pins into 
+                FTM0, FTM1, FTM2, FTM3 peripherals.
    - pin_init_init_gpio_pins -GPIO method configures registers according to settings  of routing and electrical features. This 
                 method is enabled only if any pin of corresponding peripheral type is selected. Selected pins are either user 
                 selected pins or pins selected in pin items in components. Call this method code to route desired pins into PTA,
@@ -350,6 +358,25 @@ Module "dmaController1" (component fsl_edma)
    - dmaController1_EDMA_DRV_GetChannelStatus -Gets the eDMA channel status.
    - dmaController1_EDMA_DRV_GetUnfinishedBytes -Gets the unfinished bytes for the eDMA channel current TCD.
    - dmaController1_EDMA_DRV_GetFinishedBytes -Gets the bytes already transferred for the eDMA channel current TCD.
+
+Module "flexTimer1" (component fsl_ftm)
+   - flexTimer1_FTM_DRV_Init -Initializes the FTM driver.
+   - flexTimer1_FTM_DRV_Deinit -Shuts down the FTM driver.
+   - flexTimer1_FTM_DRV_PwmStop -Stops the channel PWM.
+   - flexTimer1_FTM_DRV_PwmStart -Configures the duty cycle and frequency and starts outputting the PWM on a specified channel .
+   - flexTimer1_FTM_DRV_QuadDecodeStart -Configures the parameters and activates the quadrature decode mode.
+   - flexTimer1_FTM_DRV_QuadDecodeStop -De-activates the quadrature decode mode.
+   - flexTimer1_FTM_DRV_CounterStart -Starts the FTM counter.
+   - flexTimer1_FTM_DRV_CounterStop -Stops the FTM counter.
+   - flexTimer1_FTM_DRV_CounterRead -Reads back the current value of the FTM counter.
+   - flexTimer1_FTM_DRV_SetClock -Set FTM clock source.
+   - flexTimer1_FTM_DRV_GetClock -Retrieves the frequency of the clock source feeding the FTM counter.
+   - flexTimer1_FTM_DRV_SetTimeOverflowIntCmd -Enables or disables the timer overflow interrupt.
+   - flexTimer1_FTM_DRV_SetFaultIntCmd -Enables or disables the fault interrupt.
+   - flexTimer1_FTM_DRV_SetupChnInputCapture -Enables capture of an input signal on the channel using the function parameters.
+   - flexTimer1_FTM_DRV_SetupChnOutputCompare -Configures the FTM to generate timed pulses.
+   - flexTimer1_FTM_DRV_SetupChnDualEdgeCapture -Configures the dual edge capture mode of the FTM.
+   - flexTimer1_FTM_DRV_IRQHandler -Action to take when an FTM interrupt is triggered.
 
 Module "Cpu"       (component MK22FN512LH12_4SDK)
    - Cpu_SystemInit -This method configures the oscillator (PLL) that is part of the microcontroller device. SystemInit is 

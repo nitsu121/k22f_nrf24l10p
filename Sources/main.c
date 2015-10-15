@@ -38,12 +38,35 @@
 #include "pitTimer1.h"
 #include "uartCom1.h"
 #include "dmaController1.h"
+#include "flexTimer1.h"
 #include "NRF24L01_DRIVER.h"
 
 #if CPU_INIT_CONFIG
   #include "Init_Config.h"
 #endif
 /* User includes (#include below this line is not maintained by Processor Expert) */
+
+void ChangeDutyPWM(unsigned char PercentDuty);
+
+
+
+void ChangeDutyPWM(unsigned char PercentDuty)
+{
+	unsigned char Temp;
+
+	if(100 <= PercentDuty)
+	{
+		Temp = 100;
+	}
+	else
+	{
+		Temp = PercentDuty;
+	}
+
+	  FTM_DRV_PwmStop(FSL_FLEXTIMER1, &flexTimer1_ChnConfig0, 0U);
+	  flexTimer1_ChnConfig0.uDutyCyclePercent = Temp;
+	  FTM_DRV_PwmStart(FSL_FLEXTIMER1,&flexTimer1_ChnConfig0,0U);
+}
 
 /*lint -save  -e970 Disable MISRA rule (6.3) checking. */
 int main(void)
@@ -90,14 +113,26 @@ int main(void)
 	  Set_NRF24L_Rx_Mode();
   }
 
+  //FTM_HAL_SetChnCountVal(ftmBase, channel, uCnv);
+  //flexTimer1_ChnConfig0->uDutyCyclePercent = 50;
+  //FTM_DRV_PwmStart(FSL_FLEXTIMER1,&flexTimer1_ChnConfig0,0U);
+  //FTM_DRV_PwmStop(FSL_FLEXTIMER1, &flexTimer1_ChnConfig0, 0U);
+  //flexTimer1_ChnConfig0.uDutyCyclePercent = 50;
+  //FTM_DRV_PwmStart(FSL_FLEXTIMER1,&flexTimer1_ChnConfig0,0U);
+
+  ChangeDutyPWM(75);
+
+  uint32_t RxADCValue = 0;
 
   while(1)
   {
-	  Delay_ms(1000);
+	  //Delay_ms(1000);
 	  //GPIO_DRV_SetPinOutput(LEDRGB_BLUE);
 
 	  //GPIO_DRV_ReadPinInput(uint32_t pinName);
 	  //PUSH_BUTTON1
+
+
 
 	  if(1 == SendNotGet)  // send
 	  {
@@ -117,6 +152,11 @@ int main(void)
 			  GPIO_DRV_ClearPinOutput(LEDRGB_BLUE);
 			  ReadPayload(ReadArray, 5);
 			  UART_DRV_SendDataBlocking(FSL_UARTCOM1,ReadArray, 5, 1000);
+			  RxADCValue = (ReadArray[0] << 8);
+			  RxADCValue |= ReadArray[1];
+			  RxADCValue *= 100;
+			  RxADCValue /= 65535;
+			  ChangeDutyPWM(RxADCValue);
 			  Clear_NRF_Int_Flags();
 		  }
 	  }

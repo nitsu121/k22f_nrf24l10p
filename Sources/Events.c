@@ -76,6 +76,12 @@ void PIT0_IRQHandler(void)
   /* Write your code here ... */
 }
 
+void FTM1_IRQHandler(void)
+{
+  FTM_DRV_IRQHandler(FSL_FLEXTIMER1);
+  /* Write your code here ... */
+}
+
 /* END Events */
 
 #ifdef __cplusplus

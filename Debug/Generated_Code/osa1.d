@@ -37,7 +37,9 @@ Generated_Code/osa1.o: ../Generated_Code/osa1.c ../Generated_Code/osa1.h \
  C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/hal/inc/fsl_dmamux_hal.h \
  C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/hal/inc/fsl_edma_hal.h \
  C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_edma_driver.h \
- C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_edma_request.h
+ C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_edma_request.h \
+ C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/hal/inc/fsl_ftm_hal.h \
+ C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_ftm_driver.h
 
 ../Generated_Code/osa1.h:
 
@@ -120,3 +122,7 @@ C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/hal/inc/fsl_edma_hal.h:
 C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_edma_driver.h:
 
 C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_edma_request.h:
+
+C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/hal/inc/fsl_ftm_hal.h:
+
+C:/freescale/workspace.kds/K22F-NRF24-Test/SDK/platform/drivers/inc/fsl_ftm_driver.h:

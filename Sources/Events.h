@@ -39,6 +39,7 @@
 #include "pitTimer1.h"
 #include "uartCom1.h"
 #include "dmaController1.h"
+#include "flexTimer1.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -54,6 +55,8 @@ void Delay_ms(uint32_t mSecDelay);
 
 uint16_t Counter;
 uint32_t DelayCounter;
+
+void FTM1_IRQHandler(void);
 
 /* END Events */
 
